@@ -16,6 +16,15 @@
 		</layout>
 	</appender>
 	
+	
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"></param>
+		</layout>
+	</appender>
+	
+	
+	
 	<category name="o.s">
         <priority value="off"/>
     </category>
@@ -27,5 +36,7 @@
 	<root>
 		<priority value="info" />
 		<appender-ref ref="rollingFile" />
+		<appender-ref ref="CONSOLE" />
+		
 	</root>
 </log4j:configuration>
