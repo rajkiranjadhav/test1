@@ -16,7 +16,7 @@ public class Test {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 
-		//--- logger initialization
+		//--- logger initialization---2
 		MyLogger.initializeLogger();
 		
 		MyLogger.writeLog("method invoked", 1);
