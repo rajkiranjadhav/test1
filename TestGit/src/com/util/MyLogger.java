@@ -65,6 +65,25 @@ public class MyLogger {
 	}
 	
 
+	public static void writeLog(String msg) throws IOException
+	{
+		long id=1;
+		
+		StackTraceElement[] stackTraceElements=Thread.currentThread().getStackTrace();
+		
+		
+		String className=stackTraceElements[2].getClassName();
+		String methodName=stackTraceElements[2].getMethodName();
+		int lineNumber=stackTraceElements[2].getLineNumber();
+		
+		Logger logger= Logger.getLogger(className);
+		logger.info("|"+className+"|"+methodName+"|"+lineNumber+"|"+msg+"|FC-"+id);
+		
+		
+	}
+
+	
+	
 	public static void writeLogDebug(String msg,long id)
 	{
 		
