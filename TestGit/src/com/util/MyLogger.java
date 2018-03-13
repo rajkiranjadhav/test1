@@ -67,7 +67,7 @@ public class MyLogger {
 
 	public static void writeLog(String msg) throws IOException
 	{
-		long id=1;
+		long id=2;
 		
 		StackTraceElement[] stackTraceElements=Thread.currentThread().getStackTrace();
 		
